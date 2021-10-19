@@ -74,7 +74,7 @@ class Tamer:
     def __init__(
         self,
         env,
-        num_episodes,
+        num_episodes=10,
         discount_factor=1,  # only affects Q-learning
         epsilon=0,  # only affects Q-learning
         min_eps=0,  # minimum value for epsilon after annealing
