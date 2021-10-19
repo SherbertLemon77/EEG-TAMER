@@ -38,7 +38,7 @@ class Interface:
         pygame.display.update(area)
         return reward
 
-    def get_scalar_eeg_feedback(self, stress_mag, exitment_mag):
+    def get_scalar_eeg_feedback(self, stress_mag, excitment_mag):
         """
         Get human input. 'W' key for positive, 'A' key for negative.
         Returns: scalar reward (1 for positive, -1 for negative)
@@ -46,15 +46,8 @@ class Interface:
         reward = 0
         area = None
         for event in pygame.event.get():
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_w:
-                    # area = self.screen.fill((0, 255, 0))
-                    reward = exitment_mag
-                    break
-                elif event.key == pygame.K_a:
-                    # area = self.screen.fill((255, 0, 0))
-                    reward = -stress_mag
-                    break
+            reward = excitement_mag - stress_mag
+            break
         pygame.display.update(area)
         return reward
 
