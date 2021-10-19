@@ -224,6 +224,7 @@ class Tamer:
         """
         self.epsilon = 0
         ep_rewards = []
+        cc = 0
         for i in range(n_episodes):
             state = self.env.reset()
             done = False
@@ -236,7 +237,11 @@ class Tamer:
                     self.env.render()
                 state = next_state
             ep_rewards.append(tot_reward)
-            print(f'Episode: {i + 1} Reward: {tot_reward}')
+            if tot_reward > -400:
+                cc += 1
+                print(f'Episode: {i + 1} Reward: {tot_reward} Success Rate: {round(cc/n_episodes, 2)} Success!!')
+            else:
+                print(f'Episode: {i + 1} Reward: {tot_reward} Success Rate: {round(cc/n_episodes, 2)} Failure!!')
         self.env.close()
         return ep_rewards
 
