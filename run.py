@@ -11,7 +11,6 @@ from tamer.agent import Tamer
 
 async def main():
     env = gym.make('MountainCar-v0')
-
     # hyperparameters
     discount_factor = 1
     epsilon = 0  # vanilla Q learning actually works well with no random exploration
