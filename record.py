@@ -63,13 +63,13 @@ user = {
 r = Record()
 
 # record parameters
-record_name = 'your record name'
-record_description = 'your description for record'
-record_length_s = 30
+record_name = 'oct_28_test'
+record_description = 'first test of EEG recording'
+record_length_s = 300
 
 
 # export parameters
-record_export_folder = 'your place to export, you should have write permission, example on desktop'
+record_export_folder = '/Users/lisa/Documents/Gatech/GT Robotics/TAMER/TAMER/EEG-TAMER/recordings'
 record_export_data_types = ['EEG', 'MOTION', 'PM', 'BP']
 record_export_format = 'CSV'
 record_export_version = 'V2'
