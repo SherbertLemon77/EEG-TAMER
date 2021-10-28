@@ -193,6 +193,7 @@ s.do_prepare_steps()
 
 # or only sub for eeg
 streams = ['met']
+streams = ['pow']
 
 #s.on_new_met_data()
 
