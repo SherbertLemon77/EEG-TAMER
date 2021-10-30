@@ -8,7 +8,7 @@ import gym
 
 from tamer.agent import Tamer
 
-#consumer
+
 async def main():
     env = gym.make('MountainCar-v0')
     # hyperparameters
@@ -34,4 +34,7 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
+
+
+
 
