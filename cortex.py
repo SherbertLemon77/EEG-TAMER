@@ -134,6 +134,7 @@ class Cortex(Dispatcher):
                 if result_dic['id'] == AUTHORIZE_ID:
                     if self.debug:
                         print('auth result \n', json.dumps(result_dic, indent=4))
+                    print(result_dic)
                     self.auth = result_dic['result']['cortexToken']
                     break
 

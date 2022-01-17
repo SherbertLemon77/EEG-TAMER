@@ -21,10 +21,8 @@ class Interface:
     def get_scalar_eeg_feedback(self, queue_entry):
         reward = 0
         area = None
-            #TODO change to include queue_entry
-        # print(queue_entry)
+        """TODO3: change to define reward in terms of queue_entry"""
         # reward = excitement_mag - stress_mag
-        # break
         pygame.display.update(area)
         return reward
 

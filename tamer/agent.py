@@ -10,6 +10,7 @@ from csv import DictWriter
 #imports for multithreading
 from queue import Queue
 from threading import Thread
+from multiprocessing import Process
 
 import numpy as np
 from sklearn import pipeline, preprocessing
@@ -417,20 +418,29 @@ class Tamer:
         """
 
         # Create the shared queue and launch both threads
+
+
+        """TODO2: Remove Unneeded Train sections"""
+        # if __name__ == '__main__':
+
         q = Queue()
-        t1 = Thread(target = self.consumer_train, args =(q, model_file_to_save, ))
-        t2 = Thread(target = self.producer_eeg_stream, args =(q, )) 
-        t1.start()
-        t2.start()
-  
-        #if tamer finished, kill the EEG stream since it will add to queue infinitely
-        if not t1.is_alive():
-            t2.kill()
+
+        p1 = Process(target=self.consumer_train, args=(q, model_file_to_save,))
+        p2 = Process(target=self.producer_eeg_stream, args=(q, ))
+        
+        p2.start()
+        p1.start()
+
+
+        p1.join()
+        # p2.join()
+
+         #if tamer finished, kill the EEG stream since it will add to queue infinitely
+        if not p1.is_alive():
+            p2.kill()
+       
         # Wait for all produced items to be consumed
         # q.join()
-
-
-
 
     def play(self, n_episodes=1, render=False):
         """
