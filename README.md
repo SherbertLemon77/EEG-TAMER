@@ -30,9 +30,9 @@ main modules used:
 	multiprocessing
 	queue
 	threading
-numpy
-sklearn
-pygame
+	numpy
+	sklearn
+	pygame
 	
 
 Status: Pickling Error
