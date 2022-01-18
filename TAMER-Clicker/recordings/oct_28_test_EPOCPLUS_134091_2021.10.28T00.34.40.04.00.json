@@ -1,0 +1,11 @@
+{
+    "Markers": [
+    ],
+    "connectionType": "dongle",
+    "exportApp": "com.409140.eeg-tamer",
+    "exportTime": "2021-10-28T00:39:44.159-04:00",
+    "headsetType": "EPOCPLUS",
+    "mappings": null,
+    "recordId": "f154c7d0-a8c2-4735-8ba9-e199598afcc4",
+    "user": "409140"
+}
