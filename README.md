@@ -5,8 +5,10 @@ A basic clicker-TAMER implementation was used from a repo, documentation at the 
 ## Getting started:
 -	Pull from github: https://github.com/SherbertLemon77/EEG-TAMER
 -	Install EMOTIV Launcher and log in with credentials: https://www.emotiv.com/emotiv-launcher/
-o	User:  --- confidential please ask Lisa, Rohan or Esi
-o	Password: --- confidential please ask Lisa, Rohan or Esi
+
+	User:  --- confidential please ask Lisa, Rohan or Esi
+	Password: --- confidential please ask Lisa, Rohan or Esi
+
 -	Have headset on and connected while coding (so authentication goes through and EEG stream is running)
 -	To run EEG-TAMER system execute ./run.py file from command line
 	 
@@ -17,9 +19,9 @@ Connect EEG to TAMER to train Mountain Car
 Run Mountain Car Simulation, Run TAMER, authenticate to EEG and get a stream of high performance metrics into a queue, TAMER takes metrics off of this queue and uses them as feedback (multiprocessed)
 
 ### 3 main files of interest: 
-run.py		(location: EEG TAMER>)
-agent.py	(location: EEG TAMER>tamer)
-interface.py	(location: EEG TAMER>tamer)
+	run.py		(location: EEG TAMER>)
+	agent.py	(location: EEG TAMER>tamer)
+	interface.py	(location: EEG TAMER>tamer)
 
 ### main modules used: 
 	gym
